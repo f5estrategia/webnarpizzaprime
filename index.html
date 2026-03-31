@@ -185,7 +185,7 @@
       inset: 0;
       background:
         linear-gradient(to right, #0d0d0d 15%, rgba(13, 13, 13, 0.6) 60%, rgba(13, 13, 13, 0.2) 100%),
-        url('https://twshnrvhfoeqdusdhxjo.supabase.co/storage/v1/object/public/midias%20fernendas/prime/foto3.png') center/cover no-repeat;
+        url('https://twshnrvhfoeqdusdhxjo.supabase.co/storage/v1/object/public/midias%20fernendas/prime/foto4.png') center/cover no-repeat;
     }
 
     .hero__pizza-glow {
@@ -1031,42 +1031,6 @@
       text-decoration: underline;
     }
 
-    /* ─── FLOATING CTA ─── */
-    .floating-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 50;
-      background: rgba(13, 13, 13, 0.95);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(132, 26, 21, 0.3);
-      padding: 14px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      transform: translateY(100%);
-      transition: transform 0.4s ease;
-    }
-
-    .floating-bar.visible {
-      transform: translateY(0);
-    }
-
-    .floating-bar__text {
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-    .floating-bar__text span {
-      color: var(--gold);
-    }
-
-    .floating-bar .btn {
-      padding: 12px 28px;
-      font-size: 13px;
-    }
 
     /* ─── ANIMATIONS ─── */
     @keyframes fadeUp {
@@ -1153,10 +1117,6 @@
         grid-column: span 1 !important;
       }
 
-      .floating-bar {
-        flex-direction: column;
-        gap: 10px;
-      }
     }
 
     @media (max-width: 600px) {
@@ -1602,23 +1562,8 @@
     </div>
   </footer>
 
-  <!-- FLOATING BAR -->
-  <div class="floating-bar" id="floatingBar">
-    <div class="floating-bar__text">📅 Webinar Pizza Prime — <span>Vagas Limitadas</span></div>
-    <a href="#form" class="btn">GARANTIR MINHA VAGA</a>
-  </div>
 
-  <script>
-    // Floating bar on scroll
-    const floatingBar = document.getElementById('floatingBar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 500) {
-        floatingBar.classList.add('visible');
-      } else {
-        floatingBar.classList.remove('visible');
-      }
-    });
-
+    <script>
     // Animate on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(el => {
